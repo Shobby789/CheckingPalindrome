@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding the number in given range</title>
+</head>
+
+<body>
+    Enter a word:<input type="text" id="input">
+    <button onclick="checkPalindrome();"
+        style="background-color: silver; color:black; border:none; padding: 5px; border-radius: 5px; cursor: pointer;">Check
+        Results
+    </button>
+
+    <script>
+        function checkPalindrome() {
+            const string = document.getElementById("input");
+            const str = string.value;
+
+            const arrayValues = str.split('');
+
+            const reverseArrayValues = arrayValues.reverse();
+
+            const reverseString = reverseArrayValues.join('');
+
+            if (str == reverseString) {
+                document.write(str + ' is a palindrome');
+            }
+            else {
+                document.write(str + ' is not a palindrome');
+            }
+        }
+    </script>
+</body>
+
+</html>
